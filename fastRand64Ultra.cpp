@@ -135,7 +135,7 @@ void seed() {
     uint8_t b[32];
     getrandom(b,32,0);
     for(int i = 0; i < 4; i++) {
-        int h = i * 8; // my weird code idk man dont judge me
+        int h = i * 8; // my weird code idk man -- probably doesn't matter because all the bytes are random
         s[i] = ((uint64_t)((b[h+4]<<24) | (b[h+5]<<16) | (b[h+6]<<8) | b[h+7]) << 32) | (uint64_t)((b[h]<<24) | (b[h+1]<<16) | (b[h+2]<<8) | b[h+3]);
     }
 	rand_m(32767);

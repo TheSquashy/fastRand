@@ -6,8 +6,11 @@ using namespace std;
 
 /*main.cpp*/
 int main() {
-    seed();
+
+    seed(); //seed from linux random
+
     size_t d20[21] = {0};
+    
     for(size_t i = 0; i < 1'000'000'000; i++) {
         d20[rand_m(20)]++;
     }
